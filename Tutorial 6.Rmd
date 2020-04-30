@@ -27,3 +27,16 @@ geom_point()
 grid.arrange(p1, p2)
 ```
 
+
+
+```{r}
+# Simulating data according to a normal distribution
+x <- seq(1:50)
+y <- rnorm(50) # Generating data form a normal distribution with mean 0 and variance 1
+data <- data.frame(x = x, y = y ) # Creating a data frame
+p1 = ggplot(data, aes(x= x, y = y)) +
+geom_line()
+p2 = ggplot(data, aes(x= x, y = y)) +
+geom_point()
+grid.arrange(p1, p2)
+```
